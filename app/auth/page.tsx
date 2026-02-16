@@ -1,5 +1,7 @@
 import { Suspense } from "react"
-import AuthClient from "./auth-client.tsx"
+import AuthClient from "app/auth/auth-client"
+
+export const dynamic = "force-dynamic"
 
 export default function Page() {
   return (

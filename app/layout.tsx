@@ -1,22 +1,15 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { Providers } from './providers'
+import "./globals.css"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Training Sandbox - Apprendre Cypress, Playwright et Selenium',
-  description: 'Site web éducatif pour apprendre et pratiquer les tests automatisés',
+  title: "Training Sandbox",
+  description: "Sandbox pour apprendre l’automatisation des tests",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

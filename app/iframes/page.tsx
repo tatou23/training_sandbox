@@ -1,5 +1,12 @@
-import { IframesPage } from '@/components/pages/IframesPage'
+import { Suspense } from "react"
+import IframesClient from "./iframes-client"
 
-export default function Iframes() {
-  return <IframesPage />
+export const dynamic = "force-dynamic"
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div />}>
+      <IframesClient />
+    </Suspense>
+  )
 }
