@@ -1,5 +1,12 @@
-import { HomePage } from '@/components/pages/HomePage'
+import { Suspense } from "react"
+import HomeClient from "./home-client"
 
-export default function Home() {
-  return <HomePage />
+export const dynamic = "force-dynamic"
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div />}>
+      <HomeClient />
+    </Suspense>
+  )
 }
