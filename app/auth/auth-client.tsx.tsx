@@ -1,12 +1,10 @@
 import { Suspense } from "react"
-import HomeClient from "./home-client"
-
-export const dynamic = "force-dynamic"
+import AuthClient from "./auth-client.tsx"
 
 export default function Page() {
   return (
     <Suspense fallback={<div />}>
-      <HomeClient />
+      <AuthClient />
     </Suspense>
   )
 }

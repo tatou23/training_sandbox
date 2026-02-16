@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 export default function IframeContent() {
   return (
     <div className="p-8 bg-white">
